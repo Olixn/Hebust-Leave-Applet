@@ -1,0 +1,115 @@
+<!--pages/info/info.wxml-->
+<view class="infContainer">
+    <view class="infoArea">
+        <view class="textArea">
+            <text>{{stuName}}提交的{{typeArray[type]}}</text>
+            <view class="line"><text>{{stuUni}}</text><text>{{stuPro}}</text></view>
+            <text>{{stuClass}}班</text>
+        </view>
+        <image src="{{picUrl}}" bindtap="showPic"></image>
+    </view>
+
+    <view class="taskArea">
+        <image src="{{iconUrl}}" class="taskAreaImage"></image>
+        <view class="lineItem">
+            <text class="title">审批编号</text>
+            <text class="content">{{taskid}}</text>
+        </view>
+        <view class="lineItem">
+            <text class="title">学号</text>
+            <text class="content">{{stuNum}}</text>
+        </view>
+        <view class="lineItem">
+            <text class="title">电话</text>
+            <text class="content">{{phoneOne}}</text>
+        </view>
+        <view class="lineItem">
+            <text class="title">紧急联系方式</text>
+            <text class="content">{{phoneTwo}}</text>
+            <view class="timeArea">
+                <view class="timeItem">
+                    <text>时长{{timeDif}}小时</text>
+                    <view class="timeZone">
+                        <view class="timeItem">
+                            <image src="/static/imgs/circle.svg" class="pic1"></image>
+                            <text>开始时间：{{startTime}}</text>
+                        </view>
+                        <view class="rightline"></view>
+                        <view class="timeItem">
+                            <image src="/static/imgs/circle.svg" class="pic2"></image>
+                            <text>结束时间：{{endTime}}</text>
+                            <view style="color: #bfbfbf; padding-bottom: 20rpx;">{{reason}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="lineItem">
+            <text class="title">去往地</text>
+            <text class="content">{{region[0] + ' ' + region[1] + ' ' + region[2] + ' ' + regionDetail}}</text>
+        </view>
+        <view class="lineItem">
+            <text class="title">健康状况</text>
+            <text class="content" wx:for="{{healthyList}}" wx:key="index">{{item}}</text>
+        </view>
+    </view>
+    <view class="imageArea">
+        <text class="title">上传资料</text>
+        <view class="photo">
+            <van-image use-loading-slot width="200rpx" height="200rpx">
+                <text slot="loading">暂无图片</text>
+            </van-image>
+        </view>
+    </view>
+
+    <view class="process">
+        <text class="processTitle">流程</text>
+        <view class="processItem">
+            <view>{{stuName}} 发起请假</view>
+            <view class="processLine"></view>
+            <view class="processTwo" wx:if="{{status}}">辅导员老师（{{admin}}）审核通过</view>
+            <view class="processOne" wx:else>
+                辅导员老师 审核中
+                <view class="processOneChild">等待审核</view>
+            </view>
+            <view class="processLine"></view>
+        </view>
+        <view class="processBottom"></view>
+    </view>
+
+    <!-- 审核中 -- 底部删除按钮 -->
+    <view wx:if="{{status == 0}}">
+        <view class="bottomArea"></view>
+        <view class="footer" bindtap="deleteTask">
+            <view class="footerItem">
+                <image src="/static/imgs/del.png"></image>
+                <text>删除</text>
+            </view>
+        </view>
+    </view>
+
+    <!-- 审核通过 -- 底部按钮 -->
+    <view wx:if="{{status == 1}}">
+        <view class="bottomArea"></view>
+        <view class="footer">
+            <view class="footerBar">
+                <view class="footerItem itemWidth" bindtap="editInfo">
+                    <image src="/static/imgs/edit-info.png"></image>
+                    <text>修改</text>
+                </view>
+                <view class="footerItem itemWidth" bindtap="showQR">
+                    <image src="/static/imgs/qrCode.png"></image>
+                    <text>二维码</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 二维码弹出层 -->
+    <van-popup show="{{ isShowQR }}" bind:close="closeQR" round duration="150">
+        <view class="qrArea">
+            <canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas'></canvas>
+            <view class="qrTitle">请假二维码</view>
+        </view>
+    </van-popup>
+</view>

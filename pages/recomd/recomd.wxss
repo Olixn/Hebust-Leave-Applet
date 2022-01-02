@@ -1,0 +1,139 @@
+/* pages/recomd/recomd.wxss 
+* Time：2021年10月6日21:02:21
+* Author：Ne-21
+* Desc：记录页面css
+*/
+.nav{
+    background-color: #fff;
+    height: 130rpx;
+}
+.nav .navLine {
+    padding:30rpx;
+    display: flex;
+}
+.nav .navItem {
+    padding-right:10rpx;
+}
+.nav .picker{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: #C0C4CC solid 1rpx;
+    width: 210rpx;
+    height: 75rpx;
+    border-radius: 10rpx;
+}
+.nav .picker text{
+    padding-left: 20rpx;
+}
+.nav .picker image{
+    width: 35rpx;
+    height: 42rpx;
+    padding-right: 20rpx;
+}
+
+.nav .navItem button{
+    width: 115rpx;
+    height: 75rpx;
+    border-radius: 50rpx;
+}
+
+.nav .navItem .search{
+    background-color: #3CA1FF;
+    color: honeydew;
+    font-size: 26rpx;
+    padding-bottom:0rpx; 
+    padding-top:5rpx
+}
+.nav .navItem .reset{
+    background-color: #fff;
+    font-size: 26rpx;
+    color: black;
+    border: gray solid 1rpx;
+    padding-bottom:0rpx; 
+    padding-top:5rpx
+}
+
+.listArea {
+    margin: 20rpx 40rpx;
+}
+.listArea .listItem {
+    background-color: #fff;
+    height: 320rpx;
+    border-radius: 20rpx;
+}
+
+.listArea .listItem .listLine{
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 30rpx;
+    padding-bottom: 0rpx;
+}
+
+.opText {
+    color:  #3CA1FF;
+    font-size: 28rpx;
+}
+
+.title {
+    font-size: 28rpx;
+}
+
+.time{
+    font-size: 22rpx;
+    color: #999999;
+}
+
+.content{
+    font-size: 22rpx;
+    color: #999999; 
+}
+
+.btnArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom: 50rpx;
+    width: 100%;
+}
+
+.btnArea button{
+    background-color: #3CA1FF;
+    height: 76rpx;
+    width: 330rpx;
+    color: #fff;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnArea .btnicon{
+    font-size: 35rpx;
+    padding-left: 50rpx;
+}
+.btnArea .btntext{
+    font-size: 30rpx;
+    padding-right: 50rpx;
+}
+
+.tipArea{
+    padding-top: 280rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tip image{
+    width: 110rpx;
+    height: 120rpx;
+}
+.tip text{
+    margin-top: 20rpx;
+    color: #D6D9DE;
+    font-size: 26rpx;
+}

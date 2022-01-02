@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-image": "/miniprogram/miniprogram_npm/@vant/weapp/image/index",
+    "van-popup": "/miniprogram/miniprogram_npm/@vant/weapp/popup/index"
+  },
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "详情",
+  "navigationBarTextStyle": "black"
+}

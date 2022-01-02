@@ -1,0 +1,7 @@
+<!--pages/del/del.wxml-->
+<view class="delContainer">
+    <view class="tip">
+        <image src="/static/imgs/nodata.png"></image>
+        <text>暂无数据</text>
+    </view>
+</view>

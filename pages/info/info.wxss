@@ -1,0 +1,247 @@
+/* pages/info/info.wxss 
+* Time：2021年10月8日21:01:43
+* Author：Ne-21
+* Desc：详情页面css
+*/
+
+.infoArea {
+    background-color: #ffffff;
+    height: 240rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoArea .textArea {
+    margin-top: 20rpx;
+    margin-left: 35rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoArea text {
+    padding-bottom: 30rpx;
+}
+
+.infoArea .line {
+    padding-bottom: 30rpx;
+}
+
+.infoArea .line text {
+    padding-right: 30rpx;
+}
+
+.infoArea image {
+    width: 180rpx;
+    height: 180rpx;
+    margin-top: 20rpx;
+    margin-right: 30rpx;
+    border-radius: 100%;
+}
+
+.taskArea {
+    margin-top: 20rpx;
+    background-color: #ffffff;
+    position: relative;
+}
+
+/* 图标 */
+.taskArea .taskAreaImage {
+    width: 180rpx;
+    height: 180rpx;
+    position: absolute;
+    left: 65%;
+    transform: translate(-10%, -30%);
+}
+
+.taskArea .lineItem {
+    padding-top: 20rpx;
+    padding-left: 30rpx;
+    padding-bottom: 40rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.taskArea .lineItem .content {
+    color: #999999;
+    padding-top: 20rpx;
+    font-size: 26rpx;
+}
+
+.taskArea .lineItem .timeArea {
+    background-color: #E8F6FF;
+    margin-top: 40rpx;
+    margin-right: 30rpx;
+    border-radius: 10rpx;
+}
+
+.taskArea .lineItem .timeArea .timeItem {
+    margin-left: 38rpx;
+    margin-top: 20rpx;
+
+}
+
+.timeZone {
+    position: relative;
+    color: #757e83;
+    font-size: 28rpx;
+}
+
+.timeZone .pic1 {
+    width: 25rpx;
+    height: 25rpx;
+    position: absolute;
+    left: 1%;
+    transform: translate(-50%, 0%);
+    left: 10rpx;
+    top: 8rpx;
+}
+
+.timeZone .pic2 {
+    width: 25rpx;
+    height: 25rpx;
+    position: absolute;
+    left: 1%;
+    transform: translate(-50%, 0%);
+    left: 10rpx;
+    top: 70rpx;
+}
+
+.timeZone .rightline {
+    position: absolute;
+    width: 1rpx;
+    height: 50rpx;
+    background: #bfbfbf;
+    margin-left: 10rpx;
+    transform: translate(0, -30%);
+}
+
+.imageArea {
+    padding-top: 20rpx;
+    padding-left: 30rpx;
+    padding-bottom: 40rpx;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageArea .photo {
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 30rpx;
+}
+
+.process {
+    margin-top: 10rpx;
+    padding-left: 30rpx;
+    padding-bottom: 40rpx;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.process .processTitle {
+    margin-top: 25rpx;
+}
+
+.process .processItem {
+    padding-top: 20rpx;
+    padding-left: 10rpx;
+    padding-bottom: 40rpx;
+    position: relative;
+    font-size: 28rpx;
+}
+
+.process .processItem .processLine {
+    position: absolute;
+    width: 1rpx;
+    height: 50rpx;
+    background: #bfbfbf;
+    margin-left: 30rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.process .processItem .processTwo {
+    margin-top: 65rpx;
+}
+
+.process .processItem .processOne {
+    margin-top: 65rpx;
+    position: relative;
+}
+
+.process .processItem .processOne .processOneChild {
+    position: absolute;
+    margin-left: 80rpx;
+    margin-top: 10rpx;
+    color: #bfbfbf;
+}
+
+.process .processBottom {
+    height: 50rpx;
+}
+
+.bottomArea {
+    margin-top: 15rpx;
+    display: flex;
+    flex-direction: column;
+    height: 105rpx;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    border-top: #F7F7F7 solid 1rpx;
+    background-color: #ffffff;
+}
+
+.footer .footerItem {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.footer .footerItem image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.footer .footerItem text {
+    font-size: 22rpx;
+    margin-top: 2rpx;
+    color: #9c9c9c;
+}
+
+.footer .footerBar {
+    display: flex;
+    justify-content: center
+}
+
+.itemWidth{
+    width: 50%;
+    align-items: center;
+}
+
+.qrArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 630rpx;
+    width: 500rpx;
+    background-color: #ffffff;
+}
+.qrArea .canvas{
+    margin: 75rpx 0;
+    animation: ease pulse 150ms 1;
+}
+
+.qrArea .qrTitle{
+    font-size: 36rpx;
+    font-family: SimHei;
+}

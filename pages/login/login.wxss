@@ -1,0 +1,62 @@
+/* pages/login/login.wxss 
+* Time：2021年10月5日16:19:41
+* Author：Ne-21
+* Desc：登录页面css
+*/
+.logContainer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: #fff;
+}
+
+
+.footerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+}
+.mainBody {
+    position: relative;
+}
+
+.logTitle{
+    padding-top: 20%;
+    text-align: center;
+}
+
+.logTitle text{
+    width: 30%;
+    font-size: 40rpx;
+    font-weight: 700;
+}
+
+
+.logImg{
+    padding-top: 20%;
+    text-align: center;
+}
+
+.logImg image{
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 100%;
+}
+
+.logTip{
+    padding-top: 250rpx;
+    text-align: center;
+}
+
+.logTip text{
+    width: 30%;
+    font-size: 40rpx;
+    font-weight: 700;
+}

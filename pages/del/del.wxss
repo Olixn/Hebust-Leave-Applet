@@ -1,0 +1,24 @@
+/* pages/del/del.wxss 
+* Time：2021年10月3日21:10:53
+* Author：Ne-21
+* Desc：销假css
+*/
+.delContainer{
+    padding-top: 280rpx;
+    display: flex;
+    justify-content: center;
+}
+.tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tip image{
+    width: 110rpx;
+    height: 120rpx;
+}
+.tip text{
+    margin-top: 20rpx;
+    color: #D6D9DE;
+    font-size: 26rpx;
+}

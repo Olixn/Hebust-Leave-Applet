@@ -1,0 +1,107 @@
+/* pages/reg/reg.wxss 
+* Time：2021年10月4日21:10:02
+* Author：Ne-21
+* Desc：注册页面css
+*/
+.regContainer .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.mainBody {
+    position: relative;
+}
+
+.regTitle {
+    padding-top: 40rpx;
+    text-align: center;
+}
+
+.regTitle text {
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+.opType {
+    padding-top: 30rpx;
+    text-align: center;
+}
+
+.opRadio {
+    display: flex;
+    justify-content: center;
+    font-size: 24rpx;
+    font-weight: inherit;
+}
+
+.upLoad {
+    padding-top: 20rpx;
+    text-align: center;
+}
+
+.inputArea {
+    padding-top: 35rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputArea .inputItem {
+    padding-bottom: 20rpx;
+    width: 80%;
+}
+
+.inputArea .inputItem input {
+    background: #F7F8FA;
+    height: 2.5rem;
+    padding-left: 20rpx;
+    border-radius: 10rpx;
+}
+
+.buttonArea {
+    padding-top: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonArea .buttonItem {
+    padding-bottom: 20rpx;
+    width: 80%;
+}
+
+.buttonArea .buttonItem .reg {
+    background: #3CA1FF;
+    color: honeydew;
+    font-size: 32rpx;
+    height: 2.5rem;
+    border-radius: 10rpx;
+}
+
+.buttonArea .buttonItem .res {
+    background: #F7F8FA;
+    font-size: 32rpx;
+    height: 2.5rem;
+    border-radius: 10rpx;
+}
+
+.tipArea {
+    padding-top: 15rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tipArea .wait {
+    color: #FED001;
+    font-size: 26rpx;
+}
+
+.tipArea .err {
+    color: #D45C63;
+    font-size: 26rpx;
+}

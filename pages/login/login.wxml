@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class="logContainer">
+    <view class="mainBody">
+        <view class="logTitle">
+            <text>学生请假系统</text>
+        </view>
+        <view class="logImg">
+            <image src="/static/imgs/xh.png"></image>
+        </view>
+        <view class="logTip">
+            <text>Welcome...</text>
+        </view>
+    </view>
+    <image src="/static/imgs/registerFooter.png" class="footerImg"></image>
+</view>
+

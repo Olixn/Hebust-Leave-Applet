@@ -1,0 +1,160 @@
+<!--index.wxml-->
+<view class="indContainser">
+    <view class="first">
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>学号</text></view>
+                <van-field value="{{ stuNum }}" placeholder="请输入内容" border="{{ false }}" disabled/>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer uploadContainer">
+                <view class="navTitle"><text class="important">*</text><text>照片</text></view>
+                <view class="imgArea"><image src="{{ picUrl }}"></image></view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>学院</text></view>
+                <van-field value="{{ stuUni }}" placeholder="请输入内容" border="{{ false }}" disabled/>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>专业</text></view>
+                <van-field value="{{ stuPro }}" placeholder="请输入内容" border="{{ false }}" disabled/>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>班级</text></view>
+                <van-field value="{{ stuClass }}" placeholder="请输入内容" border="{{ false }}" disabled/>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>本人联系方式</text></view>
+                <van-field id="stuPhoneOne" value="{{ stuPhoneOne }}" placeholder="请输入内容" border="{{ false }}" bind:change="handleInput" />
+            </view>
+        </van-cell>
+    </view>
+    <view class="second">
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>请假类型</text></view>
+                <view class="secondItem">
+                    <view class="section">
+                        <picker bindchange="bindTypeChange" value="{{index}}" range="{{array}}">
+                            <view class="picker">
+                                <text style="color:{{index == 4 ? '#C8C9CC' : 'block'}};font-size: 28rpx;">{{index == 4 ? '请输入内容' : array[index]}}</text>
+                            </view>
+                        </picker>
+                    </view>
+                    <van-icon name="arrow-down" class="iconItem"/>
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title">
+                <view class="navTitle"><text class="important">*</text><text>近期有无发热、咳嗽无力、咽痛腹泻等症状</text></view>
+                <view class="check_box">
+                    <van-checkbox-group value="{{ checkbox }}" bind:change="checkChange">
+                        <van-checkbox name="0" shape="square">没有出现症状</van-checkbox>
+                        <van-checkbox name="1" shape="square" disabled="{{ isCheck }}">感冒样症状：乏力、咳嗽、发烧、肌肉痛、头痛喘憋、呼吸急促</van-checkbox>
+                        <van-checkbox name="2" shape="square" disabled="{{ isCheck }}">恶心呕吐、腹泻心慌、胸闷</van-checkbox>
+                        <van-checkbox name="3" shape="square" disabled="{{ isCheck }}">结膜炎(红眼病样表现：眼睛涩、红、分泌物)</van-checkbox>
+                        <van-checkbox name="4" shape="square" disabled="{{ isCheck }}">其他症状</van-checkbox>
+                    </van-checkbox-group>
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" style="padding-top:60rpx;">
+                <view class="navTitle"><text class="important">*</text><text>请假原因</text></view>
+                <view class="section">
+                    <textarea class="self_textarea" bindblur="bindTextAreaBlur" placeholder="请输入内容" id="reason" value="{{ reason }}" bindblur="handleText" />
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title">
+                <view class="navTitle" style="padding-left: 30rpx;"><text>证明材料</text></view>
+                <view style="padding-left: 30rpx;">
+                    <van-uploader max-count="1" upload-text="选择图片" upload-icon="/static/imgs/uploder.png" />
+                </view>
+            </view>
+        </van-cell>
+    </view>
+    <view class="thired">
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>去往地</text></view>
+                <view class="secondItem">
+                    <view class="section">
+                        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                            <view class="picker">
+                                <text style="color:{{region.length == 0 ? '#C8C9CC' : 'block'}};font-size: 28rpx;">{{region.length == 0 ? '请选择' : region[0]+region[1]+region[2]}}</text>
+                            </view>
+                        </picker>
+                    </view>
+                    <van-icon name="arrow-down" class="iconItem"/>
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>详细地址</text></view>
+                <view class="secondItem">
+                    <van-field id="regionDetail" value="{{ regionDetail }}" placeholder="请输入内容" border="{{ false }}" bind:change="handleInput"/>
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>开始时间</text></view>
+                <view class="secondItem" bindtap="pickerShow" id="startTime">
+                    <view class="section">
+                        <text style="color:{{startTime == '' ? '#C8C9CC' : 'block'}};font-size: 28rpx;">{{startTime == '' ? '请输入内容' : startTime}}</text>
+                    </view>
+                    <van-icon name="arrow-down" class="iconItem"/>
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>结束时间</text></view>
+                <view class="secondItem" bindtap="pickerShow" id="endTime">
+                    <view class="section">
+                        <text style="color:{{endTime == '' ? '#C8C9CC' : 'block'}};font-size: 28rpx;">{{endTime == '' ? '请输入内容' : endTime}}</text>
+                    </view>
+                    <van-icon name="arrow-down" class="iconItem"/>
+                </view>
+            </view>
+        </van-cell>
+        <van-cell>
+            <view slot="title" class="cellContainer">
+                <view class="navTitle"><text class="important">*</text><text>紧急联系电话</text></view>
+                <view class="secondItem">
+                    <van-field id="stuPhoneTwo" value="{{ stuPhoneTwo }}" placeholder="请输入内容" border="{{ false }}" bind:change="handleInput"/>
+                </view>
+            </view>
+        </van-cell>
+    </view>
+    <view class="forth">
+        <van-cell>
+            <view slot="title" style="height: 140rpx;">
+                <view class="btn_self">
+                    <van-button round type="info" bindtap="submit">提交</van-button>
+                </view>
+            </view>
+        </van-cell>
+    </view>
+
+<!-- 多级时间选择器 -->
+<time-picker pickerShow="{{isPickerShow}}" id="picker" wx:if="{{isPickerRender}}" bind:hidePicker="pickerHide" bind:setPickerTime="setPickerTime"
+  config="{{pickerConfig}}"></time-picker>
+
+<!-- notice -->
+<van-notify id="van-notify" />
+    
+</view>

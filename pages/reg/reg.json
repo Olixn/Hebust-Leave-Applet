@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-radio": "/miniprogram/miniprogram_npm/@vant/weapp/radio/index",
+    "van-radio-group": "/miniprogram/miniprogram_npm/@vant/weapp/radio-group/index",
+    "van-uploader": "/miniprogram/miniprogram_npm/@vant/weapp/uploader/index",
+    "van-notify": "/miniprogram/miniprogram_npm/@vant/weapp/notify/index",
+    "van-toast": "/miniprogram/miniprogram_npm/@vant/weapp/toast/index"
+  },
+  "navigationBarBackgroundColor": "#8FD3DC",
+  "navigationBarTitleText": ""
+}

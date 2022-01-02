@@ -1,0 +1,61 @@
+<!--pages/recomd/recomd.wxml-->
+<view class="recContainer">
+    <view class="nav">
+        <view class="navLine">
+            <view class="navItem">
+                <picker bindchange="bindPickerOneChange" value="{{ typeIndex }}" range="{{ typeArray }}">
+                    <view class="picker">
+                        <text style="color:{{typeIndex == 5 ? '#999999' : 'block'}};font-size: {{typeIndex == 5 ? '26' : '30'}}rpx;">{{typeIndex == 5 ? '审批状态' : typeArray[typeIndex]}}</text>
+                        <image src="/static/imgs/next.png"></image>
+                    </view>
+                </picker>
+            </view>
+            <view class="navItem">
+                <picker bindchange="bindPickerTwoChange" value="{{type2Index}}" range="{{type2Array}}">
+                    <view class="picker">
+                        <text style="color:{{type2Index == 2 ? '#999999' : 'block'}};font-size: {{type2Index == 2 ? '26' : '30'}}rpx;">{{type2Index == 2 ? '销假状态' : type2Array[type2Index]}}</text>
+                        <image src="/static/imgs/next.png"></image>
+                    </view>
+                </picker>
+            </view>
+            <view class="navItem">
+                <button class="reset" bindtap="reset">清空</button>
+            </view>
+            <view class="navItem">
+                <button class="search">搜索</button>
+            </view>
+        </view>
+    </view>
+    <view class="tasksList" wx:if="{{isHas}}">
+        <view class="listArea" wx:for="{{tasks}}" wx:key="index">
+            <view class="listItem" bindtap="goToInfo" id="{{item.taskid}}">
+                <view class="listLine">
+                    <text class="title">{{item.stuName}}提交的{{typeArray[item.type]}}</text>
+                    <text class="time">{{item.create_time}}</text>
+                </view>
+                <view class="listLine">
+                    <text class="content">请假原因：{{item.reason}}</text>
+                </view>
+                <view class="listLine">
+                    <text class="content">开始时间：{{item.startTime}}</text>
+                </view>
+                <view class="listLine">
+                    <text class="content">结束时间：{{item.endTime}}</text>
+                </view>
+                <view class="listLine">
+                    <text style="color: {{item.color}};font-size: 30rpx;">{{item.statusText}}</text>
+                    <text class="opText" catchtap="operate" id='{{index}}'>{{item.opText}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="tipArea" wx:else>
+        <view class="tip">
+            <image src="/static/imgs/nodata.png"></image>
+            <text>暂无数据</text>
+        </view>
+    </view>
+    <view class="btnArea">
+     <button bindtap="goToIndex"><van-icon name="plus" class="btnicon"/><text class="btntext">新增请假</text></button>
+    </view>
+</view>

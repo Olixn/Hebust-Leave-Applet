@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-icon": "/miniprogram/miniprogram_npm/@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText": "请假记录",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

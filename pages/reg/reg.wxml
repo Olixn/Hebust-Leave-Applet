@@ -1,0 +1,58 @@
+<!--pages/reg/reg.wxml-->
+<view class="regContainer">
+    <image src="/static/imgs/bg.jpg" class="bg"></image>
+    <view class="mainBody">
+        <view class="regTitle">
+            <text>学生请假系统注册</text>
+        </view>
+        <view class="opType">
+            <view class="opRadio">
+                <van-radio-group value="{{ userType }}" bind:change="radioChange" direction="horizontal">
+                    <van-radio name="1" icon-size="30rpx">学生</van-radio>
+                    <van-radio name="2" icon-size="30rpx">管理员</van-radio>
+                </van-radio-group>
+            </view>
+        </view>
+        <view class="upLoad">
+            <view class="uploder">
+                <van-uploader max-count="1" file-list="{{ fileList }}" bind:after-read="afterRead"
+                    bind:delete="deletePic" upload-text="上传头像" upload-icon="/static/imgs/uploder.png" />
+            </view>
+        </view>
+        <view class="inputArea">
+            <view class="inputItem">
+                <input type="text" id="stuName" placeholder="请输入姓名" value="{{stuName}}" bindinput="handleInput" />
+            </view>
+            <view class="inputItem">
+                <input type="text" id="stuNum" placeholder="请输入学号" value="{{stuNum}}" bindinput="handleInput" />
+            </view>
+            <view class="inputItem">
+                <input type="text" id="stuUni" placeholder="请输入学院" value="{{stuUni}}" bindinput="handleInput" />
+            </view>
+            <view class="inputItem">
+                <input type="text" id="stuPro" placeholder="请输入专业" value="{{stuPro}}" bindinput="handleInput" />
+            </view>
+            <view class="inputItem">
+                <input type="text" id="stuClass" placeholder="请输入班级" value="{{stuClass}}" bindinput="handleInput" />
+            </view>
+        </view>
+        <view class="buttonArea" wx:if="{{isFirst}}">
+            <view class="buttonItem">
+                <button class="reg" bindtap="reg">注册</button>
+            </view>
+            <view class="buttonItem">
+                <button class="res" bindtap="reset">清空</button>
+            </view>
+        </view>
+        <view class="tipArea" wx:else="{{!isFirst}}">
+            <text class="wait">申请已提交，等待审核</text>
+        </view>
+        <view class="tipArea" wx:if="{{!isOk}}">
+            <text class="tipItem err">申请被拒绝请重新提交审核</text>
+        </view>
+    </view>
+    <!-- notice -->
+    <van-notify id="van-notify" />
+    <!-- toast -->
+    <van-toast id="van-toast" />
+</view>

@@ -1,0 +1,45 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/index/index",
+        "pages/recomd/recomd",
+        "pages/info/info",
+        "pages/reg/reg",
+        "pages/del/del",
+        "components/navBar/navBar"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#3CA1FF",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#333",
+        "selectedColor": "#50ABFF",
+        "backgroundColor": "#fff",
+        "position": "bottom",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "我要请假",
+                "iconPath": "/static/imgs/edit.png",
+                "selectedIconPath": "/static/imgs/edit-on.png"
+            },
+            {
+                "pagePath": "pages/del/del",
+                "text": "我要销假",
+                "iconPath": "/static/imgs/del.png",
+                "selectedIconPath": "/static/imgs/del-on.png"
+            },
+            {
+                "pagePath": "pages/recomd/recomd",
+                "text": "请假记录",
+                "iconPath": "/static/imgs/time.png",
+                "selectedIconPath": "/static/imgs/time-on.png"
+            }
+        ]
+    }
+}

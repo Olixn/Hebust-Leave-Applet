@@ -1,0 +1,83 @@
+/**index.wxss
+* Time：2021年10月3日21:06:20
+* Author：Ne-21
+* Desc：十级css残废。。。我自己也不知道写的是啥。。。总之是实现了。
+**/
+.navTitle{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 10rpx;
+  display: flex;
+  justify-content: start;
+}
+.van-cell{
+  padding: 0 !important;
+}
+.cellContainer{
+  height: 180rpx;
+}
+.van-field__body{
+  padding: 20rpx !important;
+}
+.uploadContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.imgArea{
+  padding-right: 20rpx;
+}
+.imgArea image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.second{
+  padding-top: 20rpx;
+}
+.section{
+  padding: 30rpx 20rpx;
+}
+.secondItem{
+  display: flex;
+  justify-content: space-between;
+}
+.iconItem{
+  padding-right: 40rpx;
+}
+.check_box{
+  padding-left: 20rpx;
+}
+.van-checkbox{
+  height: auto;
+  margin: 10rpx;
+}
+.self_textarea{
+  width: 100%;
+  height: 150rpx;
+}
+
+.thired{
+  padding-top: 20rpx;
+}
+.picker{
+  width: 600rpx !important;
+}
+
+.forth{
+  padding-top: 20rpx;
+}
+
+.btn_self{
+  padding-top: 25rpx;
+  text-align: center;
+}
+.van-button{
+  width: 600rpx !important;
+}
+
+.important {
+  color: #FB6766;
+  padding-top: 5rpx;
+  padding-right: 5rpx;
+}
